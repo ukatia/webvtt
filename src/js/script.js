@@ -5,6 +5,7 @@ var isPlaying = false;
 // subtitles file
 var subtitles = $( "input[name='video_subtitles']" ).val(); 
 
+// get video element
 var vid = document.getElementById('videoMain');
 
 vid.src = $( "input[name='video_src']" ).val();
@@ -60,7 +61,7 @@ vid.onplay = function() {
 }
 
 vid.onpause = function() {
-	isPlaying = false;;
+	isPlaying = false;
 }
 
 vid.onseeking = function() {
@@ -78,6 +79,7 @@ $('#checkSubtitles').change(function() {
 	updateTextTracks( $('#checkSubtitles').is(":checked") );
 });
 
+// update subtitles
 function updateSubtitles() {
 	// reset cues
 	cues = [];
