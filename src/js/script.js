@@ -23,12 +23,13 @@ $( "input[name='video_src']" ).change(function() {
 });
 
 
-// update video on input changed
+// update subtitles on input subtitles source changed
 $( "input[name='video_subtitles']" ).change(function() {
 	subtitles = $( "input[name='video_subtitles']" ).val();
 	updateSubtitles();
 });
 
+// if video is playing, display subtitles on top of the video
 window.setInterval(function(){
 	if (isPlaying) {
 		var currentTime = vid.currentTime;
@@ -67,6 +68,7 @@ vid.onpause = function() {
 vid.onseeking = function() {
 }
 
+// update text tracks for track element
 var updateTextTracks = function( bSubtitles ) {
 	var textTracks = document.getElementById( 'videoMain' ).textTracks;
 	if (textTracks.length < 1)
@@ -75,6 +77,7 @@ var updateTextTracks = function( bSubtitles ) {
 	textTracks[0].mode = (bSubtitles) ? 'showing' : 'disabled';
 }
 
+// if Subtitles is checked show track element with subtitles
 $('#checkSubtitles').change(function() {
 	updateTextTracks( $('#checkSubtitles').is(":checked") );
 });
