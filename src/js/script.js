@@ -153,13 +153,13 @@ function parseWebVTT(data) {
 					throw 'Error in file'
 				}
 				index ++;
-            }
-            continue;
+			}
+			continue;
 		}
 
 		if (lines[index].indexOf(TIMESTAMP_SEPARATOR) < 0) {
-              cue.id = lines[index];
-			  index++;
+			cue.id = lines[index];
+			index++;
 		}	
 		
 		// parse lines 
