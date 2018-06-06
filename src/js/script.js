@@ -41,7 +41,7 @@ window.setInterval(function(){
 			}
 		});
 		let subtitles = cues.filter(cue => {
-		  return cue.active == true;
+			return cue.active == true;
 		});
 		if (subtitles.length > 0) {
 			$( "p" ).text(subtitles[0].text);
@@ -98,15 +98,15 @@ function getTimestampSeconds(timestamp) {
 
     var timestamp_value = timestamp.match(/^(\d+):(\d{2})(:\d{2})?\.(\d{3})/);
     if (!timestamp_value) {
-      return null;
+		return null;
     }
 
     if (timestamp_value[3]) {
-      return timestampToSeconds(timestamp_value[1], timestamp_value[2], timestamp_value[3].replace(":", ""), timestamp_value[4]);
+		return timestampToSeconds(timestamp_value[1], timestamp_value[2], timestamp_value[3].replace(":", ""), timestamp_value[4]);
     } else if (timestamp_value[1] > 59) {
-      return timestampToSeconds(timestamp_value[1], timestamp_value[2], 0,  timestamp_value[4]);
+		return timestampToSeconds(timestamp_value[1], timestamp_value[2], 0,  timestamp_value[4]);
     } else {
-      return timestampToSeconds(0, timestamp_value[1], timestamp_value[2], timestamp_value[4]);
+		return timestampToSeconds(0, timestamp_value[1], timestamp_value[2], timestamp_value[4]);
     }
 }
 
@@ -182,6 +182,6 @@ function parseWebVTT(data) {
 // return true if number between a and b
 Number.prototype.between = function(a, b) {
   var min = Math.min(a, b),
-    max = Math.max(a, b);
+      max = Math.max(a, b);
   return this >= min && this <= max;
 };
