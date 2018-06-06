@@ -14,10 +14,10 @@ npm version: 5.6.0 <br/>
 
 ## Use case
 * The first input textbox contains the url of the video file.<br/>
-You can change the url and press <enter> to load another video file.<br/>
+You can change the url and press enter to load another video file.<br/>
 The default video is Sintel.<br/>
 * The first input textbox contains the url of the file containing the captions.<br/>
-You can change the url and press <enter> to load another captions file.<br/>
+You can change the url and press enter to load another captions file.<br/>
 The default captions is in English for Sintel.<br/>
 * The active cues are displayed on top of the video element.<br/>
 * Check subtitles also shows the subtitles by using the track video element.<br/>
