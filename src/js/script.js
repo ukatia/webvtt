@@ -121,7 +121,6 @@ function parseWebVTT(data) {
 	var COMMENT = /^NOTE($|[ \t])/;
 	var TIMESTAMP = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}/;
 	var TIMESTAMP_SEPARATOR = '-->'
-	var empty_lines = /\r?\n\r?\n/g;
 	var NEWLINE = /\r\n|\r|\n/
 	var index = 0;
 	
